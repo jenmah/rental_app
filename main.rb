@@ -12,7 +12,7 @@ def menu
 end
 
 
-building_one = Building.new floors: 5, address: 'Third Home, 1 GA Road, GAVille', num_of_apartments: 15, age: 100, concierge: true
+building_one = Building.new floors: 5, address: 'Third Home, London, GAVille', num_of_apartments: 15, age: 100, concierge: true
 building_two = Building.new floors: 13, address: '933 Seymour Street, Vancouver, Canada', num_of_apartments: 25, age: 9, concierge: false
 
 apartment_one = Apartment.new price: 3000, occupied: false, balcony: true, sqft: 2700, bedrooms: 3, bathrooms: 2
@@ -31,10 +31,6 @@ apartment_one.tenants << tenant_one
 apartment_two.tenants << tenant_two << tenant_four
 apartment_three.tenants << tenant_three
 
-def list_all_tenants
-  # apartment_one.tenants.each { |tenant| puts tenant.name }
-  print "testing"
-end
 
 
 def tenant_information
@@ -46,26 +42,6 @@ def tenant_information
   when 'l'
     list_all_tenants
   end
-end
-
-
-def create_new_apartment
-  print "What's the price of the apartment?"
-  @price = gets.chomp.to_i
-  print "Is the apartment occupied?"
-  @occupied = gets.chomp
-  print "Does the apartment have a balcony?"
-  @balcony = gets.chomp
-  print "What's the square footage of the apartment?"
-  @sqft = gets.chomp.to_i
-  print "How many bedrooms does the apartment have?"
-  @bedrooms = gets.chomp.to_i
-  print "How many bathrooms does the apartment have?"
-  @bathrooms = gets.chomp.to_i
-
-  new_apartment = Apartment.new price: "#{@price}", occupied: "#{@occupied}", balcony: "#{@balcony}", sqft: "#{@sqft}", bedrooms: "#{@bedrooms}", bathrooms: "#{@bathrooms}"
-
-  print new_apartment
 end
 
 
@@ -86,13 +62,11 @@ end
 def building_information
   print "Which building would you like to manage: (T)hird Home or (933) Seymour Street?"
   chosen_building = gets.chomp
-  print "Would you like to (e)vict everyone, (l)ist the names of all tenants, or (d)isplay the number of occupied and vacant flats?"
+  print "Would you like to (e)vict everyone or (d)isplay the number of occupied and vacant flats?"
   action = gets.chomp
   case action
   when 'e'
     print "testing"
-  when 'l'
-    print building_one
   when 'd'
     puts "testing"
   end
@@ -116,9 +90,6 @@ end
 
 binding.pry
 nil
-
-
-
 
 
 

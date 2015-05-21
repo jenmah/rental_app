@@ -1,6 +1,6 @@
 class Building
 
-  attr_accessor :apartments, :tenants
+  attr_accessor :floors, :address, :num_of_apartments, :age, :concierge, :apartments, :tenants
 
   def initialize(options = {})
     @floors = options[:floors]
