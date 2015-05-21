@@ -13,7 +13,7 @@ class Tenant
     apartment_one.tenants.each { |tenant| puts tenant.name }
     apartment_two.tenants.each { |tenant| puts tenant.name }
     apartment_three.tenants.each { |tenant| puts tenant.name }
-    print "testing"
+    building_one.apartments.tenants.each { |tenant| puts tenant.name }
   end
 
 end

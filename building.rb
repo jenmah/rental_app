@@ -11,6 +11,9 @@ class Building
     @apartments = options[:apartments] || []
   end
 
+  def to_s
+    "This building is located at #{@address} and features #{@num_of_apartments} luxury style apartments spread over #{@floors} floors".
+  end
 
 end
 

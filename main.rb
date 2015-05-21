@@ -48,13 +48,13 @@ end
 def apartment_information
   print "Which building would you like to manage: (T)hird Home or (933) Seymour Street?"
   chosen_building = gets.chomp
-  print "Would you like to (c)reate a new apartment or (m)ark an apartment as being renovated?"
+  print "Would you like to (c)reate a new apartment or (s)ee if an apartment as being renovated?"
   action = gets.chomp
   case action
   when 'c'
     create_new_apartment
-  when 'm'
-    print building_one
+  when 's'
+    renovation_check
   end
 end
 
@@ -62,13 +62,13 @@ end
 def building_information
   print "Which building would you like to manage: (T)hird Home or (933) Seymour Street?"
   chosen_building = gets.chomp
-  print "Would you like to (e)vict everyone or (d)isplay the number of occupied and vacant flats?"
+  print "Would you like to (e)vict everyone or (l)earn more about the building?"
   action = gets.chomp
   case action
   when 'e'
     print "testing"
-  when 'd'
-    puts "testing"
+  when 'l'
+    to_s
   end
 end
 
@@ -99,6 +99,3 @@ nil
 # [apartment_one, apartment_two, apartment_three].each do |appt|
 #   building_one.apartments << appt
 # end
-
-#this also works like the code above, but may grow much longer
-# building_one.apartments << apartment_one << apartment_two << apartment_three

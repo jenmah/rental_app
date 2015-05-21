@@ -10,6 +10,7 @@ class Apartment
     @bedrooms = options[:bedrooms]
     @bathrooms = options[:bathrooms]
     @tenants = options[:tenants] || []
+    @renovated = options[:tenants]
   end
 
   def create_new_apartment
@@ -29,6 +30,13 @@ class Apartment
     new_apartment = Apartment.new price: "#{@price}", occupied: "#{@occupied}", balcony: "#{@balcony}", sqft: "#{@sqft}", bedrooms: "#{@bedrooms}", bathrooms: "#{@bathrooms}"
 
     print new_apartment
+  end
+
+  def renovation_check
+    if @renovated == true
+      prints "This apartment is being renovated."
+    elsif
+      prints "This apartment isn't being renovated."
   end
 
 end
